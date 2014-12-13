@@ -6,10 +6,22 @@
 
 body {
     overflow-x: hidden;
+    z-index: -999;
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,Myriad, Montserrat;
+    font-weight: lighter;
 }
-
+.blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+}
 p {
     font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    
 }
 
 p.small {
@@ -31,9 +43,9 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    /*text-transform: uppercase;*/
+    font-family: Helvetica,"Helvetica Neue",Arial,sans-serif,Myriad, Montserrat;
+    font-weight: lighter;
 }
 
 hr.star-light,
@@ -45,7 +57,10 @@ hr.star-primary {
     border-top: solid 5px;
     text-align: center;
 }
-
+/*.modal-body hr.star-primary:after ,
+.modal-body hr.star-light:after {
+    background: rgba(255, 255, 255, 0.9); 
+}*/
 hr.star-light:after,
 hr.star-primary:after {
     content: "\f005";
@@ -74,7 +89,15 @@ hr.star-primary:after {
     color: #2c3e50;
     background-color: #fff;
 }
-
+hr{
+    /*margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;*/
+    color: #2c3e50;
+}
 .img-centered {
     margin: 0 auto;
 }
@@ -98,9 +121,9 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,Montserrat;
     font-size: 2em;
-    font-weight: 700;
+    font-weight: lighter;
 }
 
 header .intro-text .skills {
@@ -145,12 +168,13 @@ header .intro-text .skills {
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    /*text-transform: uppercase;*/
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,Montserrat;
+    font-weight: lighter;
 }
 
 .navbar a:focus {
@@ -179,11 +203,21 @@ section h2 {
     font-size: 3em;
 }
 
-section.success {
-    color: #fff;
-    background: #18bc9c;
+/*section.success {
+    z-index: -5;
+}*/
+section#contact {
+    z-index: 55;
+    background: #ffffff;
 }
-
+section#about {
+    position: relative;
+    z-index: -2;
+}
+section#portfolio {
+    background: #18bc9c;
+    z-index: 55;
+}
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -191,6 +225,19 @@ section.success {
 
     section.first {
         padding-top: 75px;
+    }
+    #collapseExtend {
+        position: fixed;
+        top: 60px;
+        left:0px;
+        /*margin-top:120px;
+        margin-left:30px;*/
+        cursor: pointer;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+        background-color: rgba(44,62,80,.5);
+        z-index: 0;
+        /*width:80px;*/
     }
 }
 
@@ -211,7 +258,7 @@ section.success {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
+    background: rgba(44,62,80,.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -219,8 +266,11 @@ section.success {
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
+    color:#fff;
 }
-
+.portfolio-link:hover {
+    color:#fff;
+}
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
     top: 50%;
@@ -249,14 +299,26 @@ section.success {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
+    #collapseExtend {
+        position: fixed;
+        top: 120px;
+        left:30px;
+        /*margin-top:120px;
+        margin-left:30px;*/
+        cursor: pointer;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+        background-color: rgba(44,62,80,.9);
+        z-index: 0;
+    }
 }
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #18bc9c;
     font-size: 20px;
-    color: #fff;
-    background: 0 0;
+    color: #18bc9c #fff;
+    background: #fff;
     transition: all .3s ease-in-out;
 }
 
@@ -264,9 +326,9 @@ section.success {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
-    color: #18bc9c;
-    background: #fff;
+    border: solid 2px #18bc9c;
+    color: #fff;
+    background: #18bc9c;
 }
 
 .floating-label-form-group {
@@ -384,7 +446,10 @@ footer .footer-below {
 .scroll-top .btn:focus {
     outline: 0;
 }
+/*.modal-content{
 
+    background: rgba(200, 54, 54, 0.5); 
+}*/
 .portfolio-modal .modal-content {
     padding: 100px 0;
     min-height: 100%;
@@ -394,6 +459,8 @@ footer .footer-below {
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
+    background: rgba(255, 255, 255, 0.9); 
+    color: #000;
 }
 
 .portfolio-modal .modal-content h2 {
@@ -447,4 +514,9 @@ footer .footer-below {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+
+.topic {
+    position: relative;
+    z-index: 2
 }
