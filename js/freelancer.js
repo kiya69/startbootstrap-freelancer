@@ -34,24 +34,34 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
   $('.navbar-toggle:visible').click();
 });
-$('.portfolio-item').click(function() {
+$('.portfolio-link').click(function() {
   $('section').addClass('blur');
   $('.navbar').addClass('blur');
+  $('.index').css('overflow-y', 'hidden');
 });
+
+function removeBlur() {
+  setTimeout(function() {
+    $('section').removeClass('blur');
+    $('.navbar').removeClass('blur');
+  }, 500);
+
+  $('.index').css('overflow-y', 'auto');
+}
 $('.close-modal').click(function() {
-  setTimeout(function() {
-    $('section').removeClass('blur');
-    $('.navbar').removeClass('blur');
-  }, 500);
+  removeBlur();
 });
-$('#close').click(function() {
-  setTimeout(function() {
-    $('section').removeClass('blur');
-    $('.navbar').removeClass('blur');
-  }, 500);
+$(document.body).on('click', "#close", function() {
+  removeBlur();
 });
 $('body').on("keydown", function(e) {
   if (e.keyCode == 27) {
     $('.close-modal').click();
   }
+});
+$('.arrow-left').click(function() {
+  $('body').css('overflow-y', 'hidden');
+});
+$('.arrow-right').click(function() {
+  $('body').css('overflow-y', 'hidden');
 });

@@ -1200,7 +1200,6 @@ if (typeof jQuery === 'undefined') {
       if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
       $target.one('hidden.bs.modal', function() {
         $this.is(':visible') && $this.trigger('focus')
-        console.log("close")
       })
     })
     Plugin.call($target, option, this)

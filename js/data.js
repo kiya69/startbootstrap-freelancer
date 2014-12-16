@@ -1,7 +1,7 @@
 var agendas = [{
   "numb": 1,
   "date": "01/02/1986",
-  "desc": '<img src = "glyphicons glyphicons-baby-formula">Born in Changhua, Taiwan',
+  "desc": 'Born in Changhua, Taiwan',
   "keys": "<img src = 'images/1336374426491.jpg' width=600 height=400>"
 }, {
   "numb": 2,
@@ -61,7 +61,7 @@ var agendas = [{
 }, {
   "numb": 13,
   "date": "2013 - 2014",
-  "desc": "<span></span>Studied Master of Science in Multimedia Experience and Management at Stevens Institute of Technology",
+  "desc": "Studied Master of Science in Multimedia Experience and Management at Stevens Institute of Technology",
   "keys": "• Courses: Software Architecture, Human-Computer Interaction, Interactive Computer Graphics, Computer Vision, Real-time Rendering</br>• GPA: 3.84<br>• Project: virDrobe <ul><li>• Used the open source framework, openFrameworks and C++ to develop a user-friendly and intuitive application for users to store their clothes’ information.</li><li>• The application has 2 main functions: Scan and Fit.</li><li>• Scan: it scans the image that is within a certain distance. Users can define the distances by themselves. They can simply hold the clothes in front of Kinect’s camera and scan it. They can operate this function using hand gestures with Kinect.</li><li>• Fit: users can try the clothes on by retrieving the data from the software with hand gestures interacted with Kinect. The software will detect the face of the user and draw the clothes the user selects accordingly.</li><li>• Once the user stays on any button for more than 1 second, it triggers a click, and the application will give a click sound to indicate the user that the action is completed. It will give the user a feedback to know the operation has been done.</li><li>• Video demonstration: <br><iframe src=//player.vimeo.com/video/83082921 width=500 height=389 frameborder=0 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></li></ul>"
 }, {
   "numb": 14,

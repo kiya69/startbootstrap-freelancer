@@ -37,14 +37,14 @@
 .timeline li > time {
   font-family: monospace;
   position: absolute;
-  top: -1.6em;
+  /*top: -1.6em;*/
   left: -12.3em;
   width: 205px;
-  text-align: right;
+  text-align: right;/*
   transform: rotate(15deg);
   -moz-transform:rotate(15deg);  
   -webkit-transform:rotate(15deg);  
-  -o-transform:rotate(15deg);
+  -o-transform:rotate(15deg);*/
 }
 .timeline li > title{
   display: block;
@@ -101,10 +101,10 @@
 .timeline li > title:before {
   content: "-";/*"\2022";*/
   position: absolute;
-  top: -0.2em;
+  /*top: -0.2em;*/
   left: -0.2em;
   font-size: 1em;
-  transform: rotate(10deg);
+  /*transform: rotate(10deg);*/
 }
 
 /* mark of today */
@@ -167,7 +167,11 @@
   padding: 0 .5em;
   transform: rotate(5deg);
 }
-
+@media(max-width:767px) {
+  .timeline{
+    width: 100%;
+  }
+}
 #toTop {
   content: "top";/*"\2022";*/
   /*display:none;*/
